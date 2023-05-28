@@ -1,26 +1,37 @@
 import discord
-from salable.license import check_grantee_id
+from salable.license import check_grantee_id, get_license_details_from_ctx
 import os
 
 bot = discord.Bot()
 connections = {}
 
+
+@bot.command()
+async def free(ctx):
+    embed = discord.Embed()
+    embed.description = f'''This endpoint is free to use, so no license check needed!'''
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def premium(ctx):
+    # Get relevant ids you want to check against as grantee_ids
+    is_user_licensed, is_channel_licensed, is_guild_licensed = get_license_details_from_ctx(ctx)
+    embed = discord.Embed()
+    if is_user_licensed or is_channel_licensed or is_guild_licensed:
+        embed.description = f'''You are licensed to use this premium feature!'''
+    else: 
+        embed.description = f'''Woops, sorry you're not licensed to use this feature. Please use /salable to buy a license'''
+    await ctx.send(embed=embed)
+
 @bot.command()
 async def salable(ctx): 
-    # Get relevant ids you want to check against as grantee_ids
+
     user_id = ctx.author.id
     guild_id = ctx.guild.id
     channel_id = ctx.channel.id
 
-    # Get license status for each grantee_id
-    user_check=check_grantee_id(user_id)
-    is_user_licensed=user_check["licensed"]
-                
-    guild_check=check_grantee_id(guild_id)
-    is_guild_licensed=guild_check["licensed"]
-    
-    channel_check=check_grantee_id(channel_id)
-    is_channel_licensed=channel_check["licensed"]
+    # Get relevant ids you want to check against as grantee_ids
+    is_user_licensed, is_channel_licensed, is_guild_licensed = get_license_details_from_ctx(ctx)
 
     # A default response (both licensed and not) which shows the license status
     embed = discord.Embed()
