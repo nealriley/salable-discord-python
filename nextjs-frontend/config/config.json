@@ -1,0 +1,36 @@
+{
+  "site": {
+    "title": "guild.ist",
+    "base_url": "/",
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_width": "192",
+    "logo_height": "48",
+    "logo_text": "guild.ist"
+  },
+
+  "settings": {
+    "pagination": 4,
+    "summary_length": 200,
+    "blog_folder": "blogs"
+  },
+
+  "nav_button": {
+    "enable": true,
+    "label": "Get Started",
+    "link": "/sign-in"
+  },
+
+  "params": {
+    "contact_form_action": "",
+    "tag_manager_id": "",
+    "footer_content": "guild.ist is the most powerful suite of community-building agents and automations",
+    "copyright": "Designed and Developed By [Themefisher](https://themefisher.com/)"
+  },
+
+  "metadata": {
+    "meta_author": "Themefisher",
+    "meta_image": "",
+    "meta_description": "A SAAS template for nextjs"
+  }
+}
