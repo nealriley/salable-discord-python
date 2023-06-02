@@ -18,9 +18,6 @@ const Home = ({ frontmatter }) => {
   const { title } = config.site;
   const { user } = useUser()
   const { capabilities, licenses } = useSalable()
-  console.log(`User: ${user}
-  Licenses: ${",".split(licenses)}
-  `)
   return (
     <Base title={title}>
       {/* Banner */}

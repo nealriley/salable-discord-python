@@ -13,6 +13,7 @@ def check_grantee_id(grantee_id):
         'x-api-key': SALABLE_API_KEY
     }
     response = requests.get(url=f'{SALABLE_URL}?productUuid={SALABLE_PRODUCT_ID}&granteeIds=[{grantee_id}]', headers=headers)
+    print(response)
     if response.status_code == 200:
         return({
             'status': response.status_code,

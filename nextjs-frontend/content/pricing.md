@@ -12,8 +12,8 @@ plans:
     - One guild per account
     - Community support 
   button:
-    label: Get started for free
-    link: "/sign-up"
+    label: Add to Discord for free
+    link: "https://discord.com/api/oauth2/authorize?client_id=1113947027898892422&permissions=277025392640&scope=bot"
 
 - title: guild+ Plan
   subtitle: Best for growing communities
@@ -26,20 +26,8 @@ plans:
     - Dedicated Support channel
     - Customs Bots and Agent
   button:
-    label: Purchase guild+
-    link: "/contact"
-
-# - title: Business Plan
-#   subtitle: Best For Large Individuals
-#   price: 99
-#   type: month
-#   features:
-#     - Express Service
-#     - Customs Clearance
-#     - Time-Critical Services
-#   button:
-#     label: Get started
-#     link: "/contact"
+    label: Get Started
+    link: "/docs/guild-plus"
 
 call_to_action:
   title: Need something custom?

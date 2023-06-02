@@ -4,6 +4,8 @@ import Contact from "@layouts/Contact";
 import Default from "@layouts/Default";
 import Faq from "@layouts/Faq";
 import Pricing from "@layouts/Pricing";
+import Purchase from "@layouts/Purchase";
+import Complete from "@layouts/Complete";
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
 
 // for all regular pages
@@ -29,6 +31,10 @@ const RegularPages = ({ data }) => {
         <Pricing data={data} />
       ) : layout === "faq" ? (
         <Faq data={data} />
+      ) : layout === "purchase" ? (
+        <Purchase data={data} />
+      ) : layout === "complete" ? (
+        <Complete data={data} />
       ) : (
         <Default data={data} />
       )}

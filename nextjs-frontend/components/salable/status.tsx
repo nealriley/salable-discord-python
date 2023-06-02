@@ -3,8 +3,6 @@ import styles from "/styles/Shared.module.css";
 const deletePlan = async (licenseId) => {
     try {
       // const returnedLicenses = await api.licenses.getLicenses(userId);
-      console.log(licenseId)
-      console.log(process.env["SALABLE_API_KEY"])
       const res = await fetch("/api/salable/delete?licenseId="+licenseId, {
         method: "DELETE", 
         headers: {

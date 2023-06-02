@@ -14,7 +14,6 @@ export const SalableProvider = ({ children }) => {
       try {
         const res = await fetch("/api/salable");
         const body = await res.json();
-        console.dir(body)
         setCapabilities(body["capabilities"])
         setUserId(body["id"])
         setLicenses(body["licenses"])

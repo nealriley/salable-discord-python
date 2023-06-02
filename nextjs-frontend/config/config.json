@@ -12,25 +12,25 @@
   "settings": {
     "pagination": 4,
     "summary_length": 200,
-    "blog_folder": "blogs"
+    "blog_folder": "docs"
   },
 
   "nav_button": {
     "enable": true,
-    "label": "Get Started",
-    "link": "/sign-in"
+    "label": "Add to Discord",
+    "link": "https://discord.com/api/oauth2/authorize?client_id=1113947027898892422&permissions=277025392640&scope=bot"
   },
 
   "params": {
     "contact_form_action": "",
     "tag_manager_id": "",
     "footer_content": "guild.ist is the most powerful suite of community-building agents and automations",
-    "copyright": "Designed and Developed By [Themefisher](https://themefisher.com/)"
+    "copyright": "Copyright 2023 - guild.ist"
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "",
     "meta_image": "",
-    "meta_description": "A SAAS template for nextjs"
+    "meta_description": ""
   }
 }
