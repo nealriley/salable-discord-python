@@ -9,5 +9,5 @@ tasks:
 ports:
   - name: Open Me!
     port: 3000
-    onOpen: open-preview
+    onOpen: open-browser
     visibility: public
