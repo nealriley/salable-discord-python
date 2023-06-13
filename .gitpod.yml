@@ -1,9 +1,10 @@
 tasks:
   - name: NextJS Frontend
     init: cd nextjs-frontend && yarn
-    command: cd nextjs-frontend && yarn run dev
+    command: yarn run dev
   - name: Discord Bot Backend
-    command: cd python-discord-bot && python bot.py
+    init: cd python-discord-bot && pip install -r requirements.txt
+    command: python bot.py
 
 ports:
   - name: Open Me!
