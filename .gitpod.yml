@@ -1,0 +1,12 @@
+tasks:
+  - name: NextJS Frontend
+    init: cd nextjs-frontend && yarn
+    command: cd nextjs-frontend && yarn run dev
+  - name: Discord Bot Backend
+    command: cd python-discord-bot && python bot.py
+
+ports:
+  - name: Open Me!
+    port: 3000
+    onOpen: open-preview
+    visibility: public
