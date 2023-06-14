@@ -7,7 +7,7 @@ tasks:
     command: cd /workspace/salable-discord-python/python-discord-bot && python bot.py
   - name: Fly Installer
     init: curl -L https://fly.io/install.sh | sh
-    command: export FLYCTL_INSTALL="/home/gitpod/.fly" && export PATH="$FLYCTL_INSTALL/bin:$PATH" && fly auth login
+    command: export FLYCTL_INSTALL="/home/gitpod/.fly" && export PATH="$FLYCTL_INSTALL/bin:$PATH" && fly auth token
 
 ports:
   - name: Open Me!
