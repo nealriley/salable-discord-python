@@ -5,6 +5,9 @@ tasks:
   - name: Discord Bot Backend
     init: cd /workspace/salable-discord-python/python-discord-bot && pip install -r requirements.txt
     command: cd /workspace/salable-discord-python/python-discord-bot && python bot.py
+  - name: Fly Installer
+    init: curl -L https://fly.io/install.sh | sh
+    command: export FLYCTL_INSTALL="/home/gitpod/.fly" && export PATH="$FLYCTL_INSTALL/bin:$PATH" && fly auth login
 
 ports:
   - name: Open Me!
