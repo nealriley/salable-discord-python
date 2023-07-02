@@ -60,14 +60,14 @@ const App = ({ Component, pageProps }) => {
             I[b].t=1*new Date();i=n.createElement(f);i.async=1;i.src=o;
             p=n.getElementsByTagName(f)[0];p.parentNode.insertBefore(i,p)})
             (window,document,'script','https://livechat.infobip.com/widget.js','liveChat');
-            liveChat('init', ${process.env["WIDGET_SDK_INFOBIP_API_KEY"]});`}}/>  
+            liveChat('init', '${process.env["WIDGET_SDK_INFOBIP_API_KEY"]}')`}}/>  
         <script dangerouslySetInnerHTML={{__html: `
             (function(e,t,n,o){e.PeopleEventsObject=o;e[o]=e[o]||{init:function(t){e[o].apiKey=t},
             setPerson:function(t,n){e[o].person=t;e[o].personTtl=n},forgetPerson:function(){e[o].toForgetPerson=true},track:function(){(e[o].q=e[o].q||[]).push(arguments)},
             updatePerson:function(t){e[o].personToUpdate={person:t}},appendToList:function(t,n){e[o].attributeToAppend={attributeName:t,attribute:n}}};var r=t.createElement("script");
             var s=t.getElementsByTagName("script")[0];r.async=1;r.src=n;s.parentNode.insertBefore(r,s)})
             (window,document,"https://s3.eu-central-1.amazonaws.com/portal-cdn-production/people-events-sdk/pe.latest-2.js","pe");
-            pe.init(${process.env["PEOPLE_SDK_INFOBIP_API_KEY"]})`}}/>  
+            pe.init( '${process.env["PEOPLE_SDK_INFOBIP_API_KEY"]}' )`}}/>  
       </Head>
       <ClerkProvider {...pageProps}>
         <SalableProvider {...pageProps}>
